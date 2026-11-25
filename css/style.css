@@ -677,6 +677,51 @@ h2 em, h1 em { font-style: italic; color: var(--lime); }
   padding: 0;
   list-style: none;
 }
+
+/* A card whose body opens the repo and whose Play pill opens the game.
+   The title link is stretched over the card; the pill sits above it. */
+.card__title {
+  color: inherit;
+  text-decoration: none;
+}
+.card__title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+.card__links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.card__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid rgba(200, 245, 106, 0.38);
+  border-radius: 999px;
+  background: rgba(200, 245, 106, 0.08);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s var(--ease);
+}
+.card__play:hover {
+  border-color: rgba(200, 245, 106, 0.65);
+  background: rgba(200, 245, 106, 0.17);
+  transform: translateY(-1px);
+}
+.card__play span { font-size: 9px; }
 .tags li {
   padding: 4px 10px;
   border-radius: 6px;
