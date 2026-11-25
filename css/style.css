@@ -337,6 +337,13 @@ h2 em, h1 em { font-style: italic; color: var(--lime); }
   line-height: 1.02;
 }
 
+.sec-lede {
+  margin: 20px 0 0;
+  max-width: 58ch;
+  color: var(--body);
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
